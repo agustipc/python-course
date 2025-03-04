@@ -4,6 +4,9 @@
 # Python do not convert types automatically, it has a strong type system.
 ###
 
+import os
+os.system("clear")
+
 print("Converting types:")
 print("100", type("100"))
 print(int("100"), type(int("100")))

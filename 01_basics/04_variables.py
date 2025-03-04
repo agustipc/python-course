@@ -4,6 +4,10 @@
 # python is a strong and dynamic typed language
 ###
 
+import os
+os.system("clear")
+
+
 my_name = 'Agustí'
 
 print(my_name)

@@ -3,6 +3,9 @@
 # input() is a function that allows you to get user input from the console.
 ###
 
+import os
+os.system("clear")
+
 print("Hello, what's your name?")
 name = input()
 age = input(f"Hello, {name}, what's your age?\n")

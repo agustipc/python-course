@@ -2,6 +2,9 @@
 comments
 """
 
+import os
+os.system("clear")
+
 print('int:')
 print(10, type(10))
 print(-1, type(-1))
