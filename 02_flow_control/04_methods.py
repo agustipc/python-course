@@ -1,68 +1,84 @@
 ###
 # 04 - Listas Métodos
-# Los métodos más importantes para trabajar con listas
+# Most important methods to work with lists
 ###
 
-# Creamos una lista con valores
-lista1 = ['a', 'b', 'c', 'd']
 
-# Añadir o insertar elementos a la lista
-lista1.append('e') # Añade un elemento al final
-print(lista1)
+import os
+os.system('clear')
 
-lista1.insert(1, '@') # Inserta un elemento en la posición que le indiquemos como primer argumento
-print(lista1)
 
-lista1.extend(['😃', '😍']) # Agrega elementos al final de la lista
-print(lista1)
+print('-------------------')
+print('Add items to a list')
 
-# Eliminar elementos de la lista
-lista1.remove('@') # Eliminar la primera aparición de la cadena de texto @
-print(lista1)
+list1 = [5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list1.append(11)
+print(list1)
 
-ultimo = lista1.pop() # Eliminar el último elemento de la lista y además te lo devuelve
-print(ultimo)
-print(lista1)
 
-lista1.pop(1) # Eliminar el segundo elemento de la lista (es el índice 1)
-print(lista1)
+# insert a value in a specific position by the index
+list1.insert(0, 0)
+print(list1)
 
-# Eliminar por lo bestia un índice
-del lista1[-1]
-print(lista1)
+# add elements to the end of a list
+list1.extend([12, 13, 14])
+print(list1)
 
-lista1.clear() # Eliminar todos los elementos de la lista
-print(lista1)
 
-# Eliminar un rango de elementos
-lista1 = ['🐼', '🐨', '🐶', '😿', '🐹']
-del lista1[1:3] # eliminamos los elementos del índice 1 al 3 (no incluye el índice 3)
-print(lista1)
+print('\n-------------------')
+print('remove items from a list')
 
-# Más métodos útiles
-print('Ordenar listas modificando la original')
-numbers = [3, 10, 2, 8, 99, 101]
-numbers.sort()
-print(numbers)
+# remove the first appearance of a value
+list1.remove(5)
+print(list1)
 
-print('Ordenar listas creando una nueva lista')
-numbers = [3, 10, 2, 8, 99, 101]
-sorted_numbers = sorted(numbers)
-print(sorted_numbers)
+# remove the last item
+popped_item = list1.pop()
+print(list1)
+print(popped_item)
 
-print("Ordenar una lista de cadenas de texto (todo minúscula)")
-frutas = ['manzana', 'pera', 'limón', 'manzana', 'pera', 'limón']
-sorted_frutas = sorted(frutas)
-print(sorted_frutas)
+# remove an item by index
+list1.pop(0)
+print(list1)
 
-print("Ordenar una lista de cadenas de texto (mezclas mayúscula y minúscula)")
-frutas = ['manzana', 'Pera', 'Limón', 'manzana', 'pera', 'limón']
-frutas.sort(key=str.lower)
-print(frutas)
+# remove a range of elements
+del list1[1 : 3]
+print(list1)
 
-# Más cositas útiles
-animals = ['🐶', '🐼', '🐨', '🐶']
-print(len(animals)) # Tamaño de la listas -> 4
-print(animals.count('🐶')) # Cuantas veces aparece el elemento '🐶' -> 2
-print('🐼' in animals) # Comprueba si hay un '🐼' en la lista -> True
-print('🐹' in animals) # -> False
+# remove all items
+list1.clear()
+print(list1)
+
+
+print('\n-------------------')
+print('sort items from a list')
+
+list2 = [5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# modify the list
+list2.sort()
+print(list2)
+
+list2 = [5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# return a sorted list
+sorted_list = sorted(list2)
+print(list2)
+print(sorted_list)
+
+fruits = ['banana', 'apple', 'orange', 'grape']
+fruits.sort()
+print(fruits)
+
+fruits_uppercase = ['banana', 'apple', 'Orange', 'Grape']
+fruits_uppercase.sort()
+print(fruits_uppercase)
+
+fruits_uppercase.sort(key=str.lower)
+print(fruits_uppercase)
+
+
+fruits = ['banana', 'apple', 'orange', 'grape', 'apple', 'grape']
+print(len(fruits))
+print(fruits.count('apple'))
+print('apple' in fruits)
+
+
